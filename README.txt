@@ -2,3 +2,4 @@ Drafted is a free scheduling tool meant to introduce the basic functionality of 
 --------------
 Created by Corben Vaughn 2024
 corbenvaughn.com/drafted
+--------------
