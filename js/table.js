@@ -90,16 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			"tcolor":"#121212"
 		},
 		{
-			"theme":"sunset",
-			"pcolor":"#3f3f3f",
-			"scolor":"#282828",
-			"tcolor":"#121212"
+			"theme":"coffee",
+			"pcolor":"#8B4513",
+			"scolor":"#D2B48C",
+			"tcolor":"#FFFFFF"
 		},
 		{
-			"theme":"terminal",
-			"pcolor":"#3f3f3f",
-			"scolor":"#282828",
-			"tcolor":"#121212"
+			"theme":"pastel pink",
+			"pcolor":"#FF6F88",
+			"scolor":"#FFB6C1",
+			"tcolor":"#FFD1DC"
 		}
 	];
 
