@@ -114,12 +114,34 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.documentElement.style.setProperty('--pcolor', newTheme.pcolor);
 		document.documentElement.style.setProperty('--scolor', newTheme.scolor);
 		document.documentElement.style.setProperty('--tcolor', newTheme.tcolor);
+
+		const d = new Date();
+		d.setTime(d.getTime() + (31536000000));
+		let exp = "expires=" + d.toUTCString();
+		document.cookie = "theme="+index+";"+exp+"path=/";
 	}
 
-	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		currentTheme = 1;
+	let result = "";
+	let themeCookie = "theme=";
+	let ca = document.cookie.split(";");
+	for(let i = 0; i < ca.length; i++){
+		let c = ca[i];
+		while(c.charAt(0) == ''){
+			c = c.substring(1);
+		}
+		if(c.indexOf(themeCookie) == 0){
+			result = c.substring(themeCookie.length,c.length);
+		}
+	}
+
+	if(result != ""){
+		currentTheme = result;
 	}else{
-		currentTheme = 0;
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			currentTheme = 1;
+		}else{
+			currentTheme = 0;
+		}
 	}
 
 	applyTheme(currentTheme);
