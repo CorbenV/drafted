@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	let themes = [
 		{
 			"theme":"light",
-			"pcolor":"#000000", //row highlight/accent
-			"scolor":"#ebebeb", // textcolor
-			"tcolor":"#ffffff", // bg
+			"pcolor":"#000000",
+			"scolor":"#ebebeb", 
+			"tcolor":"#ffffff", 
 		},
 		{
 			"theme":"dark",
@@ -102,10 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			"tcolor":"#FFD1DC"
 		}
 	];
-
-// primary: h1, header text, tr text
-// secondary: h2, h3, tr bg
-// third: main background, other tr backgrounds
 
 	let currentTheme;
 
@@ -155,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			currentTheme = 0;
 		}
 		applyTheme(currentTheme);
-		console.log(currentTheme);
 	}
 
 	let addBtn = document.getElementById("add");
